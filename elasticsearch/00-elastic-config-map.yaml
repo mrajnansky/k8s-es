@@ -11,7 +11,7 @@ data:
     network.host: 0.0.0.0
     http.port: 9200
     transport.port: 9300
-    bootstrap.memory_lock: true
+    bootstrap.memory_lock: false
     cluster.name: "elasticsearch"
     node.name: "elasticsearch-node"
     path.data: /usr/share/elasticsearch/data

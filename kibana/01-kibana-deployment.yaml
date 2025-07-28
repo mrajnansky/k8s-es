@@ -22,8 +22,13 @@ spec:
           env:
             - name: ELASTICSEARCH_HOSTS
               value: "http://elasticsearch:9200"
-            - name: ELASTICSEARCH_SERVICEACCOUNT_TOKEN
+            - name: ELASTICSEARCH_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: kibana-service-token
-                  key: token
+                  name: kibana-credentials
+                  key: username
+            - name: ELASTICSEARCH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: kibana-credentials
+                  key: password
